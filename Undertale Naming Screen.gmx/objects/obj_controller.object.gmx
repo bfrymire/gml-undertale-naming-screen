@@ -302,19 +302,6 @@ if name_state == 'Choosing_Name' {
        */
        
 }
-/*
-var debug_text = '';
-for(var row = 0; row &lt; array_height_2d(taken_name); row++) {
-       for(var column = 0; column &lt; array_length_2d(taken_name, row); column++) {
-              debug_text += string(taken_name[@ row, column]);
-              debug_text += ', '
-       }
-       debug_text += '#';
-}
-if debug_text != '' {
-       draw_set_color(c_red);
-       draw_text(10,10,debug_text);
-}
 </string>
           </argument>
         </arguments>
