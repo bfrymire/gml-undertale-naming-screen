@@ -199,14 +199,31 @@ if name_state = 'Choosing_Name' {
        }
        if name_state == 'Confirmation' {
               // name confirmation page
-              if name_index == 0 {
-                     show_message('name_state is Confirmation');
-              }
               if name_index &lt; 1 {
                      name_index += 0.25 / room_speed; // 1 / 4 seconds;
                      if name_index &gt; 1 {
                             name_index = 1;
                      }
+              }
+              if is_name_taken == true {
+              } else {
+                    if keyboard_check_pressed(vk_left) {
+                            confirmation_index -= 0;
+                    }
+                    if keyboard_check_pressed(vk_right) {
+                            confirmation_index += 1;
+                    }
+                    if confirmation_index != clamp(confirmation_index, 0, array_length_1d(confirmation_text)-1) {
+                            confirmation_index = clamp(confirmation_index, 0, array_length_1d(confirmation_text)-1);
+                    }
+              }
+              if keyboard_check_pressed(vk_enter) {
+                    if confirmation_index == 0 {
+                            name_state = 'Choosing_Name';
+                    } else if confirmation_index == 1 {
+                            show_message('Pass the (current_string) on');
+                            name_state = 'Choosing_Name'; // remove after testing
+                    }
               }
        }
 }
@@ -295,13 +312,13 @@ if name_state == 'Choosing_Name' {
                     if i == confirmation_index {
                             draw_set_color(string_highlight_color);
                     }
-                    draw_text(10 + i * 64,10,string(confirmation_text[i])); // edit this later to place correctly on screen
+                    draw_text(10 + i * 64,64,string(confirmation_text[i])); // edit this later to place correctly on screen
                     // reset draw color back to 'string_color'
                     draw_set_color(string_color);
             }
        } else {
             draw_set_color(string_highlight_color);
-            draw_text(10,10,"Go back"); // edit this later to place correctly on screen
+            draw_text(10,64,"Go back"); // edit this later to place correctly on screen
             draw_set_color(string_color);
        }
        
