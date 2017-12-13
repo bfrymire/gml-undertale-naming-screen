@@ -86,7 +86,7 @@ ascii_characters[h, 2] = 'Done';
 // Confirmation page text
 confirmation_text[0] = "No";
 confirmation_text[1] = "Yes";
-confirmation_index = 0;
+confirmation_index = 1;
 </string>
           </argument>
         </arguments>
