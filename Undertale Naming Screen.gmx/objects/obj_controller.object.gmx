@@ -51,8 +51,8 @@ header_text = 'Name the fallen human.';
 is_taken_name = false;
 taken_name_index = noone;
 taken_name = noone; // this is necessary, variable needs to be defined
-taken_name = scr_2d_array_add(taken_name, "fryman", "Hey! Thats my name!");
-taken_name = scr_2d_array_add(taken_name, "AAAAAA", "Oh, sweet name dude.");
+taken_name = scr_2d_array_add(taken_name, "fryman", "Hey! Thats my name!", true);
+taken_name = scr_2d_array_add(taken_name, "AAAAAA", "Oh, sweet name dude.", false);
 
 // adding A-Z
 var w, max_w, h;
