@@ -218,9 +218,14 @@ if name_state = 'Choosing_Name' {
                     }
               }
               if keyboard_check_pressed(vk_enter) {
+                    if is_name_taken == true {
+                            confirmation_index = 0;
+                    }
                     if confirmation_index == 0 {
+                            // "No"
                             name_state = 'Choosing_Name';
                     } else if confirmation_index == 1 {
+                            // "Yes"
                             show_message('Pass the (current_string) on');
                             name_state = 'Choosing_Name'; // remove after testing
                     }
