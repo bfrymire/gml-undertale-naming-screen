@@ -51,7 +51,8 @@ header_text = 'Name the fallen human.';
 is_taken_name = false;
 taken_name_index = noone;
 taken_name = noone; // this is necessary, variable needs to be defined
-taken_name = scr_2d_array_add(taken_name, "fryman", "Hey! Thats my name!");
+// taken_name = scr_2d_array_add(taken_name, name, message, is_unique?);
+taken_name = scr_2d_array_add(taken_name, "fryman", "Hey! Thats my name!", true);
 
 // adding A-Z
 var w, max_w, h;
@@ -185,7 +186,7 @@ if name_state = 'Choosing_Name' {
               is_name_taken = false;
               for(var i = 0; i &lt; array_height_2d(taken_name) ; i++) {
                      if string_lower(taken_name[i, 0]) == string_lower(current_string) {
-                            is_name_taken = true;
+                            is_name_taken = taken_name[i, 2];
                             name_taken_index = i;
                             break;
                      }
