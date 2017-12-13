@@ -224,6 +224,7 @@ if name_state = 'Choosing_Name' {
                     }
                     if confirmation_index == 0 {
                             // "No"
+                            confirmation_index = 1;
                             name_state = 'Choosing_Name';
                     } else if confirmation_index == 1 {
                             // "Yes"
