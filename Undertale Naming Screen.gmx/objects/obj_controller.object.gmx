@@ -34,6 +34,8 @@ current_string = '';
 string_position_x = 0;
 string_position_y = 0;
 string_color = c_white;
+// The original highlighted color is yellow;
+// However, it's very difficult to see
 // string_highlight_color = c_yellow;
 string_highlight_color = c_aqua;
 
@@ -53,7 +55,8 @@ taken_name_index = noone;
 taken_name = noone; // this is necessary, variable needs to be defined
 // taken_name = scr_2d_array_add(taken_name, name, message, is_unique?);
 taken_name = scr_2d_array_add(taken_name, "fryman", "Hey! Thats my name!", true);
-taken_name = scr_2d_array_add(taken_name, "AAAAAA", "Oh, sweet name dude.", false);
+taken_name = scr_2d_array_add(taken_name, "AAAAAA", "Not very creative...?", false);
+taken_name = scr_2d_array_add(taken_name, "TehZachinator", "That name is technically unpossible...", false);
 
 // adding A-Z
 var w, max_w, h;
