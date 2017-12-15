@@ -161,7 +161,7 @@ if name_state = 'Choosing_Name' {
               current_string = scr_string_backspace(current_string);
        }
        
-       if keyboard_check_pressed(vk_enter) {
+       if keyboard_check_pressed(vk_enter) || keyboard_check_pressed(vk_space) {
               if string_position_y != array_height_2d(ascii_characters) - 1 {
                      if string_length(current_string) &lt; max_string {
                             current_string += ascii_characters[string_position_y, string_position_x];
