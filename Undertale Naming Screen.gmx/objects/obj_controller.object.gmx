@@ -192,6 +192,7 @@ if name_state = 'Choosing_Name' {
               is_name_taken = false;
               for(var i = 0; i &lt; array_height_2d(taken_name) ; i++) {
                      if string_lower(taken_name[i, 0]) == string_lower(current_string) {
+                            header_text = taken_name[i, 1];
                             is_name_taken = taken_name[i, 2];
                             name_taken_index = i;
                             break;
@@ -231,6 +232,7 @@ if name_state = 'Choosing_Name' {
                             // "Yes"
                             show_message('Pass the (current_string) on');
                             name_state = 'Choosing_Name'; // remove after testing
+                            header_text = 'Name the fallen human.'; // remove after testing
                     }
               }
        }
