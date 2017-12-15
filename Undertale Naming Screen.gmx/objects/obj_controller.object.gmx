@@ -53,6 +53,7 @@ taken_name_index = noone;
 taken_name = noone; // this is necessary, variable needs to be defined
 // taken_name = scr_2d_array_add(taken_name, name, message, is_unique?);
 taken_name = scr_2d_array_add(taken_name, "fryman", "Hey! Thats my name!", true);
+taken_name = scr_2d_array_add(taken_name, "AAAAAA", "Oh, sweet name dude.", false);
 
 // adding A-Z
 var w, max_w, h;
@@ -83,6 +84,11 @@ h = array_height_2d(ascii_characters);
 ascii_characters[h, 0] = 'Quit';
 ascii_characters[h, 1] = 'Backspace';
 ascii_characters[h, 2] = 'Done';
+
+// Confirmation page text
+confirmation_text[0] = "No";
+confirmation_text[1] = "Yes";
+confirmation_index = 1;
 </string>
           </argument>
         </arguments>
@@ -155,7 +161,7 @@ if name_state = 'Choosing_Name' {
               current_string = scr_string_backspace(current_string);
        }
        
-       if keyboard_check_pressed(vk_enter) {
+       if keyboard_check_pressed(vk_enter) || keyboard_check_pressed(vk_space) {
               if string_position_y != array_height_2d(ascii_characters) - 1 {
                      if string_length(current_string) &lt; max_string {
                             current_string += ascii_characters[string_position_y, string_position_x];
@@ -195,14 +201,37 @@ if name_state = 'Choosing_Name' {
        }
        if name_state == 'Confirmation' {
               // name confirmation page
-              if name_index == 0 {
-                     show_message('name_state is Confirmation');
-              }
               if name_index &lt; 1 {
                      name_index += 0.25 / room_speed; // 1 / 4 seconds;
                      if name_index &gt; 1 {
                             name_index = 1;
                      }
+              }
+              if is_name_taken == false {
+                    if keyboard_check_pressed(vk_left) {
+                            confirmation_index -= 1;
+                    }
+                    if keyboard_check_pressed(vk_right) {
+                            confirmation_index += 1;
+                    }
+                    if confirmation_index != clamp(confirmation_index, 0, array_length_1d(confirmation_text)-1) {
+                            confirmation_index = clamp(confirmation_index, 0, array_length_1d(confirmation_text)-1);
+                    }
+              }
+              if keyboard_check_pressed(vk_enter) {
+                    if is_name_taken == true {
+                            confirmation_index = 0;
+                    }
+                    if confirmation_index == 0 {
+                            // "No"
+                            confirmation_index = 1;
+                            name_state = 'Choosing_Name';
+                            header_text = 'Name the fallen human.';
+                    } else if confirmation_index == 1 {
+                            // "Yes"
+                            show_message('Pass the (current_string) on');
+                            name_state = 'Choosing_Name'; // remove after testing
+                    }
               }
        }
 }
@@ -286,6 +315,20 @@ if name_state == 'Choosing_Name' {
        }
 } else if name_state == 'Confirmation' {
        // 'Confirmation' Screen
+       if is_name_taken = false {
+            for(var i = 0; i &lt; array_length_1d(confirmation_text); i++) {
+                    if i == confirmation_index {
+                            draw_set_color(string_highlight_color);
+                    }
+                    draw_text(10 + i * 64,64,string(confirmation_text[i])); // edit this later to place correctly on screen
+                    // reset draw color back to 'string_color'
+                    draw_set_color(string_color);
+            }
+       } else {
+            draw_set_color(string_highlight_color);
+            draw_text(10,64,"Go back"); // edit this later to place correctly on screen
+            draw_set_color(string_color);
+       }
        
        // draw last line of ascii_characters
        /*
@@ -302,19 +345,6 @@ if name_state == 'Choosing_Name' {
        }
        */
        
-}
-/*
-var debug_text = '';
-for(var row = 0; row &lt; array_height_2d(taken_name); row++) {
-       for(var column = 0; column &lt; array_length_2d(taken_name, row); column++) {
-              debug_text += string(taken_name[@ row, column]);
-              debug_text += ', '
-       }
-       debug_text += '#';
-}
-if debug_text != '' {
-       draw_set_color(c_red);
-       draw_text(10,10,debug_text);
 }
 </string>
           </argument>
