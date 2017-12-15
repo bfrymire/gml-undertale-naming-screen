@@ -226,6 +226,7 @@ if name_state = 'Choosing_Name' {
                             // "No"
                             confirmation_index = 1;
                             name_state = 'Choosing_Name';
+                            header_text = 'Name the fallen human.';
                     } else if confirmation_index == 1 {
                             // "Yes"
                             show_message('Pass the (current_string) on');
