@@ -19,8 +19,6 @@ I want to say thank you to [Harry Wakamatsu](https://twitter.com/JapanYoshiLOL) 
 
 ###Version Changes:
 
-----
-
 **Version 1.1**
 
 Name of Fallen can now be typed using a keyboard
