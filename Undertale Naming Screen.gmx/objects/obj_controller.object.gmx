@@ -244,11 +244,11 @@ if name_state = 'Choosing_Name' {
                 header_text = 'Name the fallen human.';
             } else if confirmation_index == 1 {
                 // "Yes"
-                    show_message('Pass the (current_string) on');
-                    // Remove next line after testing
-                    name_state = 'Choosing_Name';
-                    // Remove next line after testing
-                    header_text = 'Name the fallen human.';
+                show_message('Pass the (current_string) on');
+                // Remove next line after testing
+                name_state = 'Choosing_Name';
+                // Remove next line after testing
+                header_text = 'Name the fallen human.';
             }
         }
     }
