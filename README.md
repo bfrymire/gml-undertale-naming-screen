@@ -25,6 +25,8 @@ Add Instructions landing page
 
 Shameless plug of my Twitter: [@\_fryman22](https://twitter.com/_fryman22)
 
+----
+
 **Version 1.1**
 
 Name of Fallen can now be typed using a keyboard
