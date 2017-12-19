@@ -172,8 +172,8 @@ if name_state = 'Choosing_Name' {
             }
         } else {
             if string_position_x == 0 {
-                // remove show_message();
-                show_message('You selected "Quit"');
+                // remove for your game
+                room_goto_previous();
                 // quit code goes here
             } else if string_position_x == 1 {
                 current_string = scr_string_backspace(current_string);
