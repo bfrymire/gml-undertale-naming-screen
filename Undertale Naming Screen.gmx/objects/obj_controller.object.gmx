@@ -185,8 +185,20 @@ if name_state = 'Choosing_Name' {
             }
         }
     }
-    if keyboard_check_pressed(vk_enter) &amp;&amp; string_length(current_string) &gt; 0 {
-
+    
+    // manual keyboard strokes
+    if keyboard_lastkey != "" {
+        if keyboard_lastkey == clamp(keyboard_lastkey,65,90) || keyboard_lastkey == clamp(keyboard_lastkey,97,122) {
+            if string_length(current_string) &lt; max_string {
+                current_string += keyboard_lastchar;
+                // if your name is the max length, move to "Done"
+                if string_length(current_string) == max_string {
+                    string_position_x = 2;
+                    string_position_y = array_height_2d(ascii_characters) - 1;
+                }
+            }
+        }
+        keyboard_lastkey = "";
     }
 } else{
     if name_state == 'Pre_Confirmation' {
@@ -205,7 +217,7 @@ if name_state = 'Choosing_Name' {
     if name_state == 'Confirmation' {
         // name confirmation page
         if name_index &lt; 1 {
-            name_index += 0.25 / room_speed; // 1 / 4 seconds;
+            name_index += 0.25 / room_speed; // 0 to 1 in 4 seconds;
             if name_index &gt; 1 {
                 name_index = 1;
             }
@@ -263,9 +275,7 @@ if name_state = 'Choosing_Name' {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_text(10,10,string(keyboard_string));
-
-// set font
+            <string>// set font
 draw_set_font(fnt_dtm_sans);
 
 // set variables
