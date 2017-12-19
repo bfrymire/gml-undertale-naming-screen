@@ -5,7 +5,7 @@ Undertale Naming Screen Resource
 
 **Language used:** Game Maker Language _(Compatible with Game Maker Studio 1.X)_
 
-**Current Version:** 1.1
+**Current Version:** 1.2
 
 ####Screenshot:
 
@@ -18,6 +18,12 @@ I want to say thank you to [Harry Wakamatsu](https://twitter.com/JapanYoshiLOL) 
 ----
 
 ###Version Changes:
+
+**Version 1.2**
+
+Add Instructions landing page
+
+Shameless plug of my Twitter: [@\_fryman22](https://twitter.com/_fryman22)
 
 **Version 1.1**
 
