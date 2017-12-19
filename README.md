@@ -1,9 +1,14 @@
 Undertale Naming Screen Resource
 --------------------------------------
+
 **Recreated by:** Brent Frymire
+
 **Language used:** Game Maker Language _(Compatible with Game Maker Studio 1.X)_
+
 **Current Version:** 1.1
+
 ####Screenshot:
+
  - [Typing out my name](https://i.gyazo.com/ca11f524ede8b7f3f8967e7ecf78c61f.gif)
 
 ----
@@ -17,10 +22,15 @@ I want to say thank you to [Harry Wakamatsu](https://twitter.com/JapanYoshiLOL) 
 ----
 
 **Version 1.1**
+
 Name of Fallen can now be typed using a keyboard
+
 Removed original requester's username from example
+
 Some code formatting fixes
 
 ----
+
 **Version 1.0**
+
 Initial Upload
