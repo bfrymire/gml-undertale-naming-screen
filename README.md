@@ -5,6 +5,8 @@ Undertale Naming Screen Resource
 
 **Language used:** Game Maker Language _(Compatible with Game Maker Studio 1.X)_
 
+**Current Version:** 1.2
+
 ####Screenshot:
 
  - [Typing out my name](https://i.gyazo.com/ca11f524ede8b7f3f8967e7ecf78c61f.gif)
