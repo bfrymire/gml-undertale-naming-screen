@@ -202,8 +202,7 @@ if name_state = 'Choosing_Name' {
             }
         } else {
             if string_position_x == 0 {
-                // remove for your game
-                room_goto_previous();
+                room_goto_previous(); // remove for your game
                 // quit code goes here
             } else if string_position_x == 1 {
                 current_string = scr_string_backspace(current_string);

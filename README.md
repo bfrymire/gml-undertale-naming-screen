@@ -3,7 +3,7 @@ Undertale Naming Screen Resource
 
 **Recreated by:** Brent Frymire
 
-**Language used:** Game Maker Language _(Compatible with Game Maker Studio 1.X)_
+**Language used:** Game Maker Language _(Compatible with Game Maker Studio 1.4)_
 
 ####Screenshot:
 
@@ -11,11 +11,19 @@ Undertale Naming Screen Resource
 
 ----
 
-I want to say thank you to [Harry Wakamatsu](https://twitter.com/JapanYoshiLOL) for [Determination: A better Undertale font](https://www.behance.net/gallery/31268855/Determination-Better-Undertale-Font). I used and included their `DMT-Sans.otf` font in the download to install while using this asset.
+I want to say "thank you" to [Harry Wakamatsu](https://twitter.com/JapanYoshiLOL) for [Determination: A better Undertale font](https://www.behance.net/gallery/31268855/Determination-Better-Undertale-Font). I used and included their `DMT-Sans.otf` font in the download to install while using this asset.
 
 ----
 
 ###Version Changes:
+
+**Version 1.3**
+
+Fixed all Twitter handles and links
+
+Added all English custom responses
+
+----
 
 **Version 1.2**
 
