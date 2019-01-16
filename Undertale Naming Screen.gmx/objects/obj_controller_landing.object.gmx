@@ -42,13 +42,13 @@ if keyboard_check_pressed(vk_enter) || keyboard_check_pressed(vk_space) {
 
 // init variables
 var box_x, box_y;
-box_x = room_width - 5 - sprite_get_width(spr_twitter) - 3 - string_width("@_fryman22") - 5;
+box_x = room_width - 5 - sprite_get_width(spr_twitter) - 3 - string_width("@frymangames") - 5;
 box_y = room_height - 5 - sprite_get_height(spr_twitter) - 5;
 // shameless plug of my twitter account
-// twitter.com/_fryman22
+// twitter.com/frymangames
 if mouse_check_button(mb_any) {
     if mouse_x &gt;= box_x &amp;&amp; mouse_y &gt;= box_y {
-        url_open_ext("https://twitter.com/_fryman22", "_blank");
+        url_open_ext("https://twitter.com/frymangames", "_blank");
     }
 }
 </string>

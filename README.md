@@ -21,7 +21,7 @@ I want to say thank you to [Harry Wakamatsu](https://twitter.com/JapanYoshiLOL) 
 
 Add Instructions landing page
 
-Shameless plug of my Twitter: [@\_fryman22](https://twitter.com/_fryman22)
+Shameless plug of my Twitter: [@frymangames](https://twitter.com/frymangames)
 
 ----
 
