@@ -102,7 +102,7 @@ draw_sprite(spr_twitter, 0, draw_x_position, draw_y_position);
 draw_x_position = room_width - 5 - sprite_get_width(spr_twitter) - 3;
 draw_y_position = room_height - 5 - hh;
 draw_set_halign(fa_right);
-draw_text(draw_x_position, draw_y_position, "@_fryman22");
+draw_text(draw_x_position, draw_y_position, "@frymangames");
 </string>
           </argument>
         </arguments>
