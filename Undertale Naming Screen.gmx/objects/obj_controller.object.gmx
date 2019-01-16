@@ -53,10 +53,40 @@ header_text = 'Name the fallen human.';
 is_taken_name = false;
 taken_name_index = noone;
 taken_name = noone; // this is necessary, variable needs to be defined
-// taken_name = scr_2d_array_add(taken_name, name, message, is_unique?);
+// taken_name = scr_2d_array_add(taken_name, name, message, is_forbidden);
+// My Name!
 taken_name = scr_2d_array_add(taken_name, "fryman", "Hey! Thats my name!", true);
+// Forbidden Names
+taken_name = scr_2d_array_add(taken_name, "Alphys", "D-don't do that.", true);
+taken_name = scr_2d_array_add(taken_name, "Asgore", "You cannot.", true);
+taken_name = scr_2d_array_add(taken_name, "Asriel", "...", true);
+taken_name = scr_2d_array_add(taken_name, "Flowey", "I already CHOSE that name.", true);
+taken_name = scr_2d_array_add(taken_name, "Sans", "nope", true);
+taken_name = scr_2d_array_add(taken_name, "Toriel", "I think you should think of your own name, my child.", true);
+taken_name = scr_2d_array_add(taken_name, "Undyne", "Get your OWN name!", true);
+taken_name = scr_2d_array_add(taken_name, "Gaster", "[Instantly reload the intro sequence.]", true);
+// Custom Responses (Allowed)
+taken_name = scr_2d_array_add(taken_name, "Frisk", "WARNING: This name will make your life hell. Proceed anyway?", false);
+taken_name = scr_2d_array_add(taken_name, "Murder", "That's a little on-the-nose, isn't it...?", false);
+taken_name = scr_2d_array_add(taken_name, "Mercy", "That's a little on-the-nose, isn't it...?", false);
+taken_name = scr_2d_array_add(taken_name, "Catty", "Bratty! Bratty! That's MY name!", false);
+taken_name = scr_2d_array_add(taken_name, "Bratty", "Like, OK I guess.", false);
+taken_name = scr_2d_array_add(taken_name, "Temmie", "hOI!", false);
+taken_name = scr_2d_array_add(taken_name, "Aaron", "Is this name correct? ;)", false);
+taken_name = scr_2d_array_add(taken_name, "Woshua", "Clean name.", false);
+taken_name = scr_2d_array_add(taken_name, "Chara", "The true name.", false);
 taken_name = scr_2d_array_add(taken_name, "AAAAAA", "Not very creative...?", false);
-
+taken_name = scr_2d_array_add(taken_name, "Metta", "OOOOH!!! ARE YOU PROMOTING MY BRAND?", false);
+taken_name = scr_2d_array_add(taken_name, "Mett", "OOOOH!!! ARE YOU PROMOTING MY BRAND?", false);
+taken_name = scr_2d_array_add(taken_name, "Mtt", "OOOOH!!! ARE YOU PROMOTING MY BRAND?", false);
+taken_name = scr_2d_array_add(taken_name, "Jerry", "Jerry.", false);
+taken_name = scr_2d_array_add(taken_name, "Papyru", "I'LL ALLOW IT!!!!", false);
+taken_name = scr_2d_array_add(taken_name, "Alphy", "Uh.... OK?", false);
+taken_name = scr_2d_array_add(taken_name, "Napsta", "............ (They are powerless to stop you.)", false);
+taken_name = scr_2d_array_add(taken_name, "Blooky", "............ (They are powerless to stop you.)", false);
+taken_name = scr_2d_array_add(taken_name, "Bpants", "You are really scraping the bottom of the barrel.", false);
+taken_name = scr_2d_array_add(taken_name, "Gerson", "Wah ha ha! Why not?", false);
+taken_name = scr_2d_array_add(taken_name, "Shyren", "...?", false);
 // adding A-Z
 var w, max_w, h;
 w = 0;
@@ -172,8 +202,7 @@ if name_state = 'Choosing_Name' {
             }
         } else {
             if string_position_x == 0 {
-                // remove for your game
-                room_goto_previous();
+                room_goto_previous(); // remove for your game
                 // quit code goes here
             } else if string_position_x == 1 {
                 current_string = scr_string_backspace(current_string);

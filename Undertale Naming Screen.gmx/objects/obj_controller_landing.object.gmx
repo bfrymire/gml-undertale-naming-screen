@@ -42,13 +42,13 @@ if keyboard_check_pressed(vk_enter) || keyboard_check_pressed(vk_space) {
 
 // init variables
 var box_x, box_y;
-box_x = room_width - 5 - sprite_get_width(spr_twitter) - 3 - string_width("@_fryman22") - 5;
+box_x = room_width - 5 - sprite_get_width(spr_twitter) - 3 - string_width("@frymangames") - 5;
 box_y = room_height - 5 - sprite_get_height(spr_twitter) - 5;
 // shameless plug of my twitter account
-// twitter.com/_fryman22
+// twitter.com/frymangames
 if mouse_check_button(mb_any) {
     if mouse_x &gt;= box_x &amp;&amp; mouse_y &gt;= box_y {
-        url_open_ext("https://twitter.com/_fryman22", "_blank");
+        url_open_ext("https://twitter.com/frymangames", "_blank");
     }
 }
 </string>
@@ -83,7 +83,7 @@ draw_y_position = 16;
 draw_set_font(fnt_dtm_mono);
 draw_set_color(c_white);
 draw_set_halign(fa_middle);
-draw_text(half_width, draw_y_position, "--Instruction--");
+draw_text(half_width, draw_y_position, "--Instructions--");
 draw_y_position += hh * 2;
 
 draw_set_halign(fa_left);
@@ -102,7 +102,7 @@ draw_sprite(spr_twitter, 0, draw_x_position, draw_y_position);
 draw_x_position = room_width - 5 - sprite_get_width(spr_twitter) - 3;
 draw_y_position = room_height - 5 - hh;
 draw_set_halign(fa_right);
-draw_text(draw_x_position, draw_y_position, "@_fryman22");
+draw_text(draw_x_position, draw_y_position, "@frymangames");
 </string>
           </argument>
         </arguments>
