@@ -83,7 +83,7 @@ draw_y_position = 16;
 draw_set_font(fnt_dtm_mono);
 draw_set_color(c_white);
 draw_set_halign(fa_middle);
-draw_text(half_width, draw_y_position, "--Instruction--");
+draw_text(half_width, draw_y_position, "--Instructions--");
 draw_y_position += hh * 2;
 
 draw_set_halign(fa_left);
