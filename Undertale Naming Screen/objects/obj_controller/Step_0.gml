@@ -70,7 +70,7 @@ if name_state = "Choosing_Name" {
     }
     
     // manual keyboard strokes
-    if keyboard_lastkey != "" {
+    if keyboard_lastkey != noone {
         if keyboard_lastkey == clamp(keyboard_lastkey, 65, 90) || keyboard_lastkey == clamp(keyboard_lastkey, 97, 122) {
             if string_length(current_string) < max_string {
                 current_string += keyboard_lastchar;
@@ -81,7 +81,7 @@ if name_state = "Choosing_Name" {
                 }
             }
         }
-        keyboard_lastkey = "";
+        keyboard_lastkey = noone;
     }
 } else{
     if name_state == "Pre_Confirmation" {
@@ -136,4 +136,3 @@ if name_state = "Choosing_Name" {
         }
     }
 }
-
