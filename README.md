@@ -3,9 +3,9 @@ Undertale Naming Screen Resource
 
 **Recreated by:** fryman22
 
-**Language used:** Game Maker Language _(Compatible with Game Maker Studio 1.4)_
+**Language used:** GameMaker Studio 2 _(Compatible with Game Maker Studio 1.4)_
 
-###Screenshot:
+#### Screenshot:
 
 ![Typing out my name](https://i.gyazo.com/ca11f524ede8b7f3f8967e7ecf78c61f.gif)
 
@@ -15,7 +15,7 @@ I want to say "thank you" to [Harry Wakamatsu](https://twitter.com/JapanYoshiLOL
 
 ----
 
-###Version Changes:
+#### Version Changes:
 
 **Version 1.3**
 
