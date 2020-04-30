@@ -1,6 +1,6 @@
 // turn off anti-aliasing filtering
 display_reset(0, false);
-texture_set_interpolation(false);
+gpu_set_texfilter(false);
 
 // current string the player inputs
 current_string = "";
