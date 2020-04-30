@@ -12,6 +12,7 @@ if keyboard_check(vk_control) {
 if keyboard_check_pressed(vk_enter) || keyboard_check_pressed(vk_space) {
     window_set_cursor(cr_default);
     room_goto_next();
+    exit;
 }
 
 // init variables

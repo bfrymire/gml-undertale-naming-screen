@@ -17,36 +17,26 @@ I want to say "thank you" to [Harry Wakamatsu](https://twitter.com/JapanYoshiLOL
 
 **Version 2.0.0**
 
-Updated engine to GameMaker Studio 2
-
-Added cooldown timer for clicking Twitter link
+- Updated engine to GameMaker Studio 2
+- Changed mouse cursor while hovering over Twitter link
+- Added cooldown timer for clicking Twitter link
 
 **Version 1.3**
 
-Fixed all Twitter handles and links
-
-Added all English custom responses
-
-----
+- Fixed all Twitter handles and links
+- Added all English custom responses
 
 **Version 1.2**
 
-Add Instructions landing page
-
-Shameless plug of my Twitter: [@frymangames](https://twitter.com/frymangames)
-
-----
+- Add Instructions landing page
+- Shameless plug of my Twitter: [@frymangames](https://twitter.com/frymangames)
 
 **Version 1.1**
 
-Name of Fallen can now be typed using a keyboard
-
-Removed original requester's username from example
-
-Some code formatting fixes
-
-----
+- Name of Fallen can now be typed using a keyboard\
+- Removed original requester's username from example
+- Some code formatting fixes
 
 **Version 1.0**
 
-Initial Upload
+- Initial Upload
