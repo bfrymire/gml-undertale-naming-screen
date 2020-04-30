@@ -21,10 +21,6 @@ Updated engine to GameMaker Studio 2
 
 Added cooldown timer for clicking Twitter link
 
-**Version 2.0.0**
-
-Updated engine to GMS2
-
 **Version 1.3**
 
 Fixed all Twitter handles and links
