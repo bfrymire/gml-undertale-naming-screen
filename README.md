@@ -1,13 +1,13 @@
 Undertale Naming Screen Resource
 --------------------------------------
 
-**Recreated by:** Brent Frymire
+**Recreated by:** fryman22
 
 **Language used:** Game Maker Language _(Compatible with Game Maker Studio 1.4)_
 
-####Screenshot:
+###Screenshot:
 
- - [Typing out my name](https://i.gyazo.com/ca11f524ede8b7f3f8967e7ecf78c61f.gif)
+![Typing out my name](https://i.gyazo.com/ca11f524ede8b7f3f8967e7ecf78c61f.gif)
 
 ----
 
