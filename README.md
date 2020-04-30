@@ -5,17 +5,21 @@ Undertale Naming Screen Resource
 
 **Language used:** GameMaker Studio 2 _(Compatible with Game Maker Studio 1.4)_
 
-#### Screenshot:
+### Screenshot:
 
 ![Typing out my name](https://i.gyazo.com/ca11f524ede8b7f3f8967e7ecf78c61f.gif)
-
-----
 
 I want to say "thank you" to [Harry Wakamatsu](https://twitter.com/JapanYoshiLOL) for [Determination: A better Undertale font](https://www.behance.net/gallery/31268855/Determination-Better-Undertale-Font). I used and included their `DMT-Sans.otf` font in the download to install while using this asset.
 
 ----
 
-#### Version Changes:
+### Version Changes:
+
+**Version 2.0.0**
+
+Updated engine to GameMaker Studio 2
+
+Added cooldown timer for clicking Twitter link
 
 **Version 1.3**
 
