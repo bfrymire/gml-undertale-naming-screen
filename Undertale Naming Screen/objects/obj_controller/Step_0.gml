@@ -71,7 +71,7 @@ if name_state = "Choosing_Name" {
     
     // manual keyboard strokes
     if keyboard_lastkey != "" {
-        if keyboard_lastkey == clamp(keyboard_lastkey,65,90) || keyboard_lastkey == clamp(keyboard_lastkey,97,122) {
+        if keyboard_lastkey == clamp(keyboard_lastkey, 65, 90) || keyboard_lastkey == clamp(keyboard_lastkey, 97, 122) {
             if string_length(current_string) < max_string {
                 current_string += keyboard_lastchar;
                 // if your name is the max length, move to "Done"
@@ -87,7 +87,7 @@ if name_state = "Choosing_Name" {
     if name_state == "Pre_Confirmation" {
         // pre confirmation page
         is_name_taken = false;
-        for(var i = 0; i < array_height_2d(taken_name) ; i++) {
+        for(var i = 0; i < array_height_2d(taken_name); i++) {
             if string_lower(taken_name[i, 0]) == string_lower(current_string) {
                 header_text = taken_name[i, 1];
                 is_name_taken = taken_name[i, 2];
@@ -112,8 +112,8 @@ if name_state = "Choosing_Name" {
               if keyboard_check_pressed(vk_right) {
                 confirmation_index += 1;
               }
-              if confirmation_index != clamp(confirmation_index, 0, array_length_1d(confirmation_text)-1) {
-                confirmation_index = clamp(confirmation_index, 0, array_length_1d(confirmation_text)-1);
+              if confirmation_index != clamp(confirmation_index, 0, array_length_1d(confirmation_text) - 1) {
+                confirmation_index = clamp(confirmation_index, 0, array_length_1d(confirmation_text) - 1);
               }
         }
         if keyboard_check_pressed(vk_enter) {
