@@ -3,7 +3,7 @@ Undertale Naming Screen Resource
 
 **Recreated by:** fryman22
 
-**Language used:** GameMaker Studio 2 _(Compatible with Game Maker Studio 1.4)_
+**Engine:** GameMaker Studio 2
 
 ### Screenshot:
 
@@ -20,6 +20,10 @@ I want to say "thank you" to [Harry Wakamatsu](https://twitter.com/JapanYoshiLOL
 Updated engine to GameMaker Studio 2
 
 Added cooldown timer for clicking Twitter link
+
+**Version 2.0.0**
+
+Updated engine to GMS2
 
 **Version 1.3**
 
