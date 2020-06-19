@@ -18,7 +18,7 @@ max_string = 6;
 // number of pixels the string can wobble when being drawn
 string_wobble = 1;
 
-name_state = "Choosing_Name"; // can only be 'Choosing_Name' || 'Confirmation'
+name_state = "Choosing_Name"; // can only be 'Choosing_Name' or 'Confirmation'
 name_index = 0;
 
 // Create a list of names that already exist
@@ -29,7 +29,7 @@ taken_name = noone; // this is necessary, variable needs to be defined
 // taken_name = scr_2d_array_add(taken_name, name, message, is_forbidden);
 // My Name!
 taken_name = scr_2d_array_add(taken_name, "fryman", "Hey! Thats my name!", true);
-// Forbidden Names
+// Forbidden Names (Not allowed)
 taken_name = scr_2d_array_add(taken_name, "Alphys", "D-don't do that.", true);
 taken_name = scr_2d_array_add(taken_name, "Asgore", "You cannot.", true);
 taken_name = scr_2d_array_add(taken_name, "Asriel", "...", true);
@@ -90,8 +90,7 @@ ascii_characters[h, 0] = "Quit";
 ascii_characters[h, 1] = "Backspace";
 ascii_characters[h, 2] = "Done";
 
-// Confirmation page text
+// confirmation page text
 confirmation_text[0] = "No";
 confirmation_text[1] = "Yes";
 confirmation_index = 1;
-

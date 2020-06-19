@@ -16,21 +16,19 @@ if keyboard_check_pressed(vk_enter) || keyboard_check_pressed(vk_space) {
 }
 
 // init variables
-var box_x, box_y;
-box_x = room_width - 5 - sprite_get_width(spr_twitter) - 3 - string_width(string_hash_to_newline("@frymangames")) - 5;
-box_y = room_height - 5 - sprite_get_height(spr_twitter) - 5;
+var box_x = room_width - 5 - string_width(github_url_string) - 5;
+var box_y = room_height - 5 - string_height(github_url_string) - 5;
 // cooldown for clicking link
-if twitter_cooldown > 0 {
-    twitter_cooldown -= 1;
+if github_cooldown > 0 {
+    github_cooldown -= 1;
 }
-// shameless plug of my twitter account
-// twitter.com/frymangames
+// open link to github repo
 if mouse_x >= box_x && mouse_y >= box_y {
     window_set_cursor(cr_handpoint);
     if mouse_check_button(mb_any) {
-        if twitter_cooldown == 0 {
-            twitter_cooldown = twitter_cooldown_max;
-            url_open_ext("https://twitter.com/frymangames", "_blank");
+        if github_cooldown == 0 {
+            github_cooldown = github_cooldown_max;
+            url_open_ext(github_url, "_blank");
         }
     }
 } else {

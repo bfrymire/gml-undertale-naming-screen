@@ -1,5 +1,4 @@
-/// @description Insert description here
-// You can write your code in this editor
-
-twitter_cooldown_max = 3 * room_speed;
-twitter_cooldown = 0;
+github_url = "https://github.com/bfrymire/undertale-naming-screen";
+github_url_string = "View repo on Github";
+github_cooldown_max = 3 * room_speed;
+github_cooldown = 0;

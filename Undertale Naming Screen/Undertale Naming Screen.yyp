@@ -55,14 +55,6 @@
             }
         },
         {
-            "Key": "1bc73a2b-e7dc-4fce-bc4f-63995fd05fdb",
-            "Value": {
-                "id": "376115e2-2937-4188-a68b-bacb1507f2b4",
-                "resourcePath": "sprites\\spr_twitter\\spr_twitter.yy",
-                "resourceType": "GMSprite"
-            }
-        },
-        {
             "Key": "36c2cada-c6af-4aa4-a810-5b5755e57e48",
             "Value": {
                 "id": "db8e19e5-51a2-430a-a415-02d7c0f2b726",
