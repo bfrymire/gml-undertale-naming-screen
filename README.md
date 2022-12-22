@@ -3,7 +3,7 @@ Undertale Naming Screen Resource
 
 Naming screen input example from the game Undertale that can be used in your games.
 
-**Engine:** GameMaker Studio 2
+**Engine:** GameMaker
 
 ### Gif:
 
