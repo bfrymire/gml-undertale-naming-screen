@@ -2,6 +2,7 @@
 draw_set_font(fnt_dtm_sans);
 
 // set variables
+var i, j;
 var _draw_y = 0;
 var _character_width = string_width("W");
 var _character_height = string_height("W");
@@ -28,8 +29,8 @@ switch (name_state) {
 	case NAME_STATES.INPUT_NAME:
 		// drawing ascii_characters
 		_draw_y += _character_height + 10;
-		for(var j = array_length(ascii_characters) - 2; j > -1; j--) {
-			for(var i = array_length(ascii_characters[j]) - 1; i > -1; i--) {
+		for(j = array_length(ascii_characters) - 2; j > -1; j--) {
+			for(i = array_length(ascii_characters[j]) - 1; i > -1; i--) {
 				// change color if currently selected index
 				if j == string_position_y && i == string_position_x {
 					draw_set_color(string_highlight_color);
@@ -45,7 +46,7 @@ switch (name_state) {
 		j = array_length(ascii_characters) - 1;
 		var _last_y = _draw_y + ((_character_height + _spacing_height) * j) + 8;
 		var _last_line_width = 0;
-		for(var i = 0; i < array_length(ascii_characters[j]); ++i) {
+		for(i = 0; i < array_length(ascii_characters[j]); ++i) {
 			// change color if currently selected index
 			if i == string_position_x && j == string_position_y {
 				draw_set_color(string_highlight_color);
@@ -67,7 +68,7 @@ switch (name_state) {
 			// reset draw color
 			draw_set_color(string_color);
 		} else {
-			for(var i = 0; i < array_length(confirmation_text); ++i) {
+			for(i = 0; i < array_length(confirmation_text); ++i) {
 				if i == confirmation_index {
 					draw_set_color(string_highlight_color);
 				}
