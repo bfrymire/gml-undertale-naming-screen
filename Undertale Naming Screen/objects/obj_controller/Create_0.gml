@@ -1,3 +1,12 @@
+enum NAME_STATES {
+    INPUT_NAME,
+    PRE_CONFIRMATION,
+    CONFIRMATION,
+    __SIZE
+}
+
+event_user(15);
+
 // turn off anti-aliasing filtering
 display_reset(0, false);
 gpu_set_texfilter(false);
@@ -18,79 +27,92 @@ max_string = 6;
 // number of pixels the string can wobble when being drawn
 string_wobble = 1;
 
-name_state = "Choosing_Name"; // can only be 'Choosing_Name' or 'Confirmation'
+name_state = NAME_STATES.INPUT_NAME;
 name_index = 0;
 
-// Create a list of names that already exist
 header_text = "Name the fallen human.";
-is_taken_name = false;
-taken_name_index = noone;
-taken_name = noone; // this is necessary, variable needs to be defined
-// taken_name = scr_2d_array_add(taken_name, name, message, is_forbidden);
+
+
+// Create a list of names that already exist
+is_name_taken = false;
+name_taken_index = noone;
+taken_names = [];
 // My Name!
-taken_name = scr_2d_array_add(taken_name, "fryman", "Hey! Thats my name!", true);
+add_name("Brent", "Hey! Thats my name!", true);
+
 // Forbidden Names (Not allowed)
-taken_name = scr_2d_array_add(taken_name, "Alphys", "D-don't do that.", true);
-taken_name = scr_2d_array_add(taken_name, "Asgore", "You cannot.", true);
-taken_name = scr_2d_array_add(taken_name, "Asriel", "...", true);
-taken_name = scr_2d_array_add(taken_name, "Flowey", "I already CHOSE that name.", true);
-taken_name = scr_2d_array_add(taken_name, "Sans", "nope", true);
-taken_name = scr_2d_array_add(taken_name, "Toriel", "I think you should think of your own name, my child.", true);
-taken_name = scr_2d_array_add(taken_name, "Undyne", "Get your OWN name!", true);
-taken_name = scr_2d_array_add(taken_name, "Gaster", "[Instantly reload the intro sequence.]", true);
+add_name("Alphys", "D-don't do that.", true);
+add_name("Asgore", "You cannot.", true);
+add_name("Asriel", "...", true);
+add_name("Flowey", "I already CHOSE that name.", true);
+add_name("Sans", "nope", true);
+add_name("Toriel", "I think you should think of your own name, my child.", true);
+add_name("Undyne", "Get your OWN name!", true);
+add_name("Gaster", "[Instantly reload the intro sequence.]", true);
+
 // Custom Responses (Allowed)
-taken_name = scr_2d_array_add(taken_name, "Frisk", "WARNING: This name will make your life hell. Proceed anyway?", false);
-taken_name = scr_2d_array_add(taken_name, "Murder", "That's a little on-the-nose, isn't it...?", false);
-taken_name = scr_2d_array_add(taken_name, "Mercy", "That's a little on-the-nose, isn't it...?", false);
-taken_name = scr_2d_array_add(taken_name, "Catty", "Bratty! Bratty! That's MY name!", false);
-taken_name = scr_2d_array_add(taken_name, "Bratty", "Like, OK I guess.", false);
-taken_name = scr_2d_array_add(taken_name, "Temmie", "hOI!", false);
-taken_name = scr_2d_array_add(taken_name, "Aaron", "Is this name correct? ;)", false);
-taken_name = scr_2d_array_add(taken_name, "Woshua", "Clean name.", false);
-taken_name = scr_2d_array_add(taken_name, "Chara", "The true name.", false);
-taken_name = scr_2d_array_add(taken_name, "AAAAAA", "Not very creative...?", false);
-taken_name = scr_2d_array_add(taken_name, "Metta", "OOOOH!!! ARE YOU PROMOTING MY BRAND?", false);
-taken_name = scr_2d_array_add(taken_name, "Mett", "OOOOH!!! ARE YOU PROMOTING MY BRAND?", false);
-taken_name = scr_2d_array_add(taken_name, "Mtt", "OOOOH!!! ARE YOU PROMOTING MY BRAND?", false);
-taken_name = scr_2d_array_add(taken_name, "Jerry", "Jerry.", false);
-taken_name = scr_2d_array_add(taken_name, "Papyru", "I'LL ALLOW IT!!!!", false);
-taken_name = scr_2d_array_add(taken_name, "Alphy", "Uh.... OK?", false);
-taken_name = scr_2d_array_add(taken_name, "Napsta", "............ (They are powerless to stop you.)", false);
-taken_name = scr_2d_array_add(taken_name, "Blooky", "............ (They are powerless to stop you.)", false);
-taken_name = scr_2d_array_add(taken_name, "Bpants", "You are really scraping the bottom of the barrel.", false);
-taken_name = scr_2d_array_add(taken_name, "Gerson", "Wah ha ha! Why not?", false);
-taken_name = scr_2d_array_add(taken_name, "Shyren", "...?", false);
+add_name("Frisk", "WARNING: This name will make your life hell. Proceed anyway?");
+add_name("Murder", "That's a little on-the-nose, isn't it...?");
+add_name("Mercy", "That's a little on-the-nose, isn't it...?");
+add_name("Catty", "Bratty! Bratty! That's MY name!");
+add_name("Bratty", "Like, OK I guess.");
+add_name("Temmie", "hOI!");
+add_name("Aaron", "Is this name correct? ;)");
+add_name("Woshua", "Clean name.");
+add_name("Chara", "The true name.");
+add_name("AAAAAA", "Not very creative...?");
+add_name("Metta", "OOOOH!!! ARE YOU PROMOTING MY BRAND?");
+add_name("Mett", "OOOOH!!! ARE YOU PROMOTING MY BRAND?");
+add_name("Mtt", "OOOOH!!! ARE YOU PROMOTING MY BRAND?");
+add_name("Jerry", "Jerry.");
+add_name("Papyru", "I'LL ALLOW IT!!!!");
+add_name("Alphy", "Uh.... OK?");
+add_name("Napsta", "............ (They are powerless to stop you.)");
+add_name("Blooky", "............ (They are powerless to stop you.)");
+add_name("Bpants", "You are really scraping the bottom of the barrel.");
+add_name("Gerson", "Wah ha ha! Why not?");
+add_name("Shyren", "...?");
+
 // adding A-Z
-var w, max_w, h;
-w = 0;
-max_w = 6;
-h = 0;
-for(var i = 65; i <= 90; i++) {
-    ascii_characters[h, w] = chr(i);
-    w++;
-    if w > max_w {
-        h++;
-        w = 0;
+var _w, _max_w, _h;
+_w = 0;
+_max_w = 6;
+_h = 0;
+for(var i = 65; i <= 90; ++i) {
+    ascii_characters[_h][_w] = chr(i);
+    _w++;
+    if _w > _max_w {
+        _h++;
+        _w = 0;
     }
 }
 // adding a-z
-w = 0;
-h = array_height_2d(ascii_characters);
-for(var i = 97; i <= 122; i++) {
-    ascii_characters[h, w] = chr(i);
-    w++;
-    if w > max_w {
-        h++;
-        w = 0;
+_w = 0;
+_h = array_length(ascii_characters);
+for(var i = 97; i <= 122; ++i) {
+    ascii_characters[_h][_w] = chr(i);
+    _w++;
+    if _w > _max_w {
+        _h++;
+        _w = 0;
     }
 }
 // adding 'Quit', 'Backspace', 'Done'
-h = array_height_2d(ascii_characters);
-ascii_characters[h, 0] = "Quit";
-ascii_characters[h, 1] = "Backspace";
-ascii_characters[h, 2] = "Done";
+_h = array_length(ascii_characters);
+ascii_characters[_h] = [
+    "Quit",
+    "Backspace",
+    "Done"
+];
 
 // confirmation page text
-confirmation_text[0] = "No";
-confirmation_text[1] = "Yes";
+confirmation_text = [
+    "No",
+    "Yes"
+];
 confirmation_index = 1;
+
+confirmation_buttons = [
+    vk_enter,
+    vk_space
+];

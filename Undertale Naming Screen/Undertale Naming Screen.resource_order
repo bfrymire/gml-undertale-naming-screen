@@ -1,0 +1,14 @@
+{
+  "FolderOrderSettings": [
+    {"name":"Fonts","order":8,"path":"folders/Fonts.yy",},
+    {"name":"Objects","order":10,"path":"folders/Objects.yy",},
+    {"name":"Rooms","order":11,"path":"folders/Rooms.yy",},
+    {"name":"Scripts","order":6,"path":"folders/Scripts.yy",},
+  ],
+  "ResourceOrderSettings": [
+    {"name":"string_backspace","order":1,"path":"scripts/string_backspace/string_backspace.yy",},
+    {"name":"fnt_dtm_sans","order":1,"path":"fonts/fnt_dtm_sans/fnt_dtm_sans.yy",},
+    {"name":"obj_controller","order":1,"path":"objects/obj_controller/obj_controller.yy",},
+    {"name":"rm_test","order":1,"path":"rooms/rm_test/rm_test.yy",},
+  ],
+}
