@@ -14,7 +14,7 @@ switch (name_state) {
         name_index = 0; // Reset name_index to 0
         if keyboard_check_pressed(vk_left) {
             if string_position_x != 0 {
-                string_position_x -=1;
+                string_position_x -= 1;
             }
         }
         if keyboard_check_pressed(vk_right) {

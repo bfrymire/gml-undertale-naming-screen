@@ -37,6 +37,7 @@ header_text = "Name the fallen human.";
 is_name_taken = false;
 name_taken_index = noone;
 taken_names = [];
+
 // My Name!
 add_name("Brent", "Hey! Thats my name!", true);
 
@@ -74,10 +75,9 @@ add_name("Gerson", "Wah ha ha! Why not?");
 add_name("Shyren", "...?");
 
 // Adding A-Z
-var _w, _max_w, _h;
-_w = 0;
-_max_w = 6;
-_h = 0;
+var _w = 0;
+var _max_w = 6;
+var _h = 0;
 for(var i = 65; i <= 90; ++i) {
     ascii_characters[_h][_w] = chr(i);
     _w++;
