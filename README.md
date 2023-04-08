@@ -1,5 +1,4 @@
 # Undertale Naming Screen
-----
 
 Naming screen input example from the game Undertale that can be used in your games.
 
