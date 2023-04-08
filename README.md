@@ -10,4 +10,4 @@ Naming screen input example from the game Undertale that can be used in your gam
 
 ## Attributions
 
-I want to say "thank you" to [Harry Wakamatsu](https://twitter.com/JapanYoshiLOL) for [Determination: A better Undertale font](https://www.behance.net/gallery/31268855/Determination-Better-Undertale-Font). I used and included their `DMT-Sans.otf` font in the download to install while using this asset.
+I want to say _"thank you"_ to [Harry Wakamatsu](https://twitter.com/JapanYoshiLOL) for [Determination: A better Undertale font](https://www.behance.net/gallery/31268855/Determination-Better-Undertale-Font). I used and included their `DMT-Sans.otf` font in the download to install while using this asset.
