@@ -1,7 +1,7 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "scr_string_backspace",
+  "name": "string_backspace",
   "isCompatibility": false,
   "isDnD": false,
   "parent": {

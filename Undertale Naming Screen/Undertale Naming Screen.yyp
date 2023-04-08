@@ -23,8 +23,7 @@
     "IDEVersion": "2023.1.1.62",
   },
   "resources": [
-    {"id":{"name":"scr_2d_array_add","path":"scripts/scr_2d_array_add/scr_2d_array_add.yy",},"order":0,},
-    {"id":{"name":"scr_string_backspace","path":"scripts/scr_string_backspace/scr_string_backspace.yy",},"order":1,},
+    {"id":{"name":"string_backspace","path":"scripts/string_backspace/string_backspace.yy",},"order":1,},
     {"id":{"name":"fnt_dtm_mono","path":"fonts/fnt_dtm_mono/fnt_dtm_mono.yy",},"order":0,},
     {"id":{"name":"fnt_dtm_sans","path":"fonts/fnt_dtm_sans/fnt_dtm_sans.yy",},"order":1,},
     {"id":{"name":"obj_controller_landing","path":"objects/obj_controller_landing/obj_controller_landing.yy",},"order":0,},
