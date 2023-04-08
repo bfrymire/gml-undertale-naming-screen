@@ -1,4 +1,4 @@
-// testing
+// Testing
 if keyboard_check(vk_control) {
     if keyboard_check_pressed(ord("W")) {
         game_end();
@@ -8,10 +8,10 @@ if keyboard_check(vk_control) {
     }
 }
 
-// picking your character's name page
+// Picking your character's name page
 switch (name_state) {
     case NAME_STATES.INPUT_NAME:
-        name_index = 0; // reset name_index to 0
+        name_index = 0; // Reset name_index to 0
         if keyboard_check_pressed(vk_left) {
             if string_position_x != 0 {
                 string_position_x -=1;
@@ -50,7 +50,7 @@ switch (name_state) {
             if string_position_y != array_length(ascii_characters) - 1 {
                 if string_length(current_string) < max_string {
                     current_string += ascii_characters[string_position_y, string_position_x];
-                    // if your name is the max length, move to "Done"
+                    // If your name is the max length, move to "Done"
                     if string_length(current_string) == max_string {
                         string_position_x = 2;
                         string_position_y = array_length(ascii_characters) - 1;
@@ -58,8 +58,8 @@ switch (name_state) {
                 }
             } else {
                 if string_position_x == 0 {
-                    room_goto_previous(); // remove for your game
-                    // quit code goes here
+                    room_goto_previous(); // Remove for your game
+                    // Quit code goes here
                 } else if string_position_x == 1 {
                     current_string = string_backspace(current_string);
                 } else {
@@ -70,12 +70,12 @@ switch (name_state) {
             }
         }
         
-        // manual keyboard strokes
+        // Manual keyboard strokes
         if keyboard_lastkey != noone {
             if keyboard_lastkey == clamp(keyboard_lastkey, 65, 90) || keyboard_lastkey == clamp(keyboard_lastkey, 97, 122) {
                 if string_length(current_string) < max_string {
                     current_string += keyboard_lastchar;
-                    // if your name is the max length, move to "Done"
+                    // If your name is the max length, move to "Done"
                     if string_length(current_string) == max_string {
                         string_position_x = 2;
                         string_position_y = array_length(ascii_characters) - 1;
@@ -100,7 +100,7 @@ switch (name_state) {
         name_state = NAME_STATES.CONFIRMATION;
         break;
     case NAME_STATES.CONFIRMATION:
-        // name confirmation page
+        // Name confirmation page
         if name_index < 1 {
             name_index += 0.25 / room_speed; // 0 to 1 in 4 seconds;
             if name_index > 1 {

@@ -7,24 +7,24 @@ enum NAME_STATES {
 
 event_user(15);
 
-// turn off anti-aliasing filtering
+// Turn off anti-aliasing filtering
 display_reset(0, false);
 gpu_set_texfilter(false);
 
-// current string the player inputs
+// Current string the player inputs
 current_string = "";
 string_position_x = 0;
 string_position_y = 0;
 string_color = c_white;
 // The original highlighted color is yellow;
 // However, it's very difficult to see
-// string_highlight_color = c_yellow;
+// String_highlight_color = c_yellow;
 string_highlight_color = c_aqua;
 
-// max number of characters the player is able to input
+// Max number of characters the player is able to input
 max_string = 6;
 
-// number of pixels the string can wobble when being drawn
+// Number of pixels the string can wobble when being drawn
 string_wobble = 1;
 
 name_state = NAME_STATES.INPUT_NAME;
@@ -73,7 +73,7 @@ add_name("Bpants", "You are really scraping the bottom of the barrel.");
 add_name("Gerson", "Wah ha ha! Why not?");
 add_name("Shyren", "...?");
 
-// adding A-Z
+// Adding A-Z
 var _w, _max_w, _h;
 _w = 0;
 _max_w = 6;
@@ -86,7 +86,7 @@ for(var i = 65; i <= 90; ++i) {
         _w = 0;
     }
 }
-// adding a-z
+// Adding a-z
 _w = 0;
 _h = array_length(ascii_characters);
 for(var i = 97; i <= 122; ++i) {
@@ -97,7 +97,7 @@ for(var i = 97; i <= 122; ++i) {
         _w = 0;
     }
 }
-// adding 'Quit', 'Backspace', 'Done'
+// Adding 'Quit', 'Backspace', 'Done'
 _h = array_length(ascii_characters);
 ascii_characters[_h] = [
     "Quit",
@@ -105,7 +105,7 @@ ascii_characters[_h] = [
     "Done"
 ];
 
-// confirmation page text
+// Confirmation page text
 confirmation_text = [
     "No",
     "Yes"
