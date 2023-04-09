@@ -38,3 +38,35 @@ add_name = function(_name, _message, _is_forbidden=false) {
     });
     return id;
 }
+
+/**
+ * Hook to run when the "Quit" action is triggered
+ * @function on_quit
+ * @returns {Id.Instance}
+ */
+on_quit = function() {
+    room_goto_previous();
+    return id;
+}
+
+/**
+ * Hook to run when the "Backspace" action is triggered
+ * @function on_backspace
+ * @returns {Id.Instance}
+ */
+on_backspace = function() {
+    current_string = string_backspace(current_string);
+    return id;
+}
+
+/**
+ * Hook to run when the "Done" action is triggered
+ * @function on_quit
+ * @returns {Id.Instance}
+ */
+on_done = function() {
+    if string_length(current_string) > 0 {
+        name_state = NAME_STATES.PRE_CONFIRMATION;
+    }
+    return id;
+}
