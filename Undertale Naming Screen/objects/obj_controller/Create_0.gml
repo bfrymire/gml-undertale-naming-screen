@@ -29,6 +29,7 @@ string_wobble = 1;
 
 name_state = NAME_STATES.INPUT_NAME;
 name_index = 0;
+name_index_amount = 0.25 / game_get_speed(gamespeed_fps);
 
 header_text = "Name the fallen human.";
 
@@ -37,7 +38,6 @@ header_text = "Name the fallen human.";
 is_name_taken = false;
 name_taken_index = noone;
 taken_names = [];
-add_take_names();
 add_taken_names();
 
 // Adding A-Z
