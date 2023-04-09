@@ -57,15 +57,19 @@ switch (name_state) {
                     }
                 }
             } else {
-                if string_position_x == 0 {
-                    room_goto_previous(); // Remove for your game
-                    // Quit code goes here
-                } else if string_position_x == 1 {
-                    current_string = string_backspace(current_string);
-                } else {
-                    if string_length(current_string) > 0 {
-                        name_state = NAME_STATES.PRE_CONFIRMATION;
-                    }
+                switch (string_position_x) {
+                    case 0:
+                        on_quit();
+                        break;
+                    case 1:
+                        on_backspace();
+                        break;
+                    case 2:
+                        on_done();
+                        break;
+                    default:
+                        show_debug_message(string("Unknown string_position_x: {0}", string_position_x));
+                        break;
                 }
             }
         }
