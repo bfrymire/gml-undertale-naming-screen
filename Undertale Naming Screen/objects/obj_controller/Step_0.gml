@@ -106,7 +106,7 @@ switch (name_state) {
     case NAME_STATES.CONFIRMATION:
         // Name confirmation page
         if name_index < 1 {
-            name_index += 0.25 / room_speed; // 0 to 1 in 4 seconds;
+            name_index += name_index_amount;
             if name_index > 1 {
                 name_index = 1;
             }
