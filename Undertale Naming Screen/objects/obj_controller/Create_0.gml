@@ -38,6 +38,7 @@ is_name_taken = false;
 name_taken_index = noone;
 taken_names = [];
 add_take_names();
+add_taken_names();
 
 // Adding A-Z
 var _w = 0;
