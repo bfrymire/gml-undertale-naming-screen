@@ -31,6 +31,9 @@ add_name = function(_name, _message, _is_forbidden=false) {
     if !is_string(_message) {
         throw(string("{0}.add_name() \"message\" expected a string, received {1}.", object_get_name(object_index), typeof(_message)));
     }
+    if !is_bool(_is_forbidden) {
+        throw(string("{0}.add_name() \"is_forbidden\" expected a boolean, received {1}.", object_get_name(object_index), typeof(_is_forbidden)));
+    }
     array_push(taken_names, {
         name: _name,
         message: _message,
@@ -61,7 +64,7 @@ on_backspace = function() {
 
 /**
  * Hook to run when the "Done" action is triggered
- * @function on_quit
+ * @function on_done
  * @returns {Id.Instance}
  */
 on_done = function() {
