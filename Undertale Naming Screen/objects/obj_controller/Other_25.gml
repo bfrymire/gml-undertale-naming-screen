@@ -7,12 +7,10 @@
  * @returns {Bool}
  */
 confirmation_button_pressed = function() {
-    var i = 0;
-    repeat (array_length(confirmation_buttons)) {
+    for(var i = 0; i < array_length(confirmation_buttons); ++i) {
         if keyboard_check_pressed(confirmation_buttons[i]) {
             return true;
         }
-        ++i;
     }
     return false;
 }
